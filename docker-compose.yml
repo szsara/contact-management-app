@@ -1,7 +1,7 @@
 version: '3.9'
 
 services:
-  postgres:
+  postgres_db:
     image: postgres:latest
     environment:
       POSTGRES_USER: ${POSTGRES_USER:-postgres}
@@ -20,8 +20,10 @@ services:
       - 8080:8080
     depends_on:
       - postgres
+    links:
+      - postgres:postgres
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://${POSTGRES_HOST:-localhost}:${POSTGRES_PORT:-5432}/${POSTGRES_DB:-cms}
+      SPRING_DATASOURCE_URL: jdbc:postgresql://${POSTGRES_HOST:-postgres_db}:${POSTGRES_PORT:-5432}/${POSTGRES_DB:-cms}
       SPRING_DATASOURCE_USERNAME: ${POSTGRES_USER:-postgres}
       SPRING_DATASOURCE_PASSWORD: ${POSTGRES_PASSWORD:-admin}
 
