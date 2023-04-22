@@ -44,8 +44,8 @@ public class UserService {
             existingUser.setSsn(user.getSsn());
             existingUser.setTaxId(user.getTaxId());
             existingUser.setEmail(user.getEmail());
-            existingUser.setAddresses(user.getAddresses().stream().map(DTOMapper::fromDto).toList());
-            existingUser.setPhoneNumbers(user.getPhoneNumbers());
+            //existingUser.setAddresses(user.getAddresses().stream().map(DTOMapper::fromDto).toList());
+            //existingUser.setPhoneNumbers(user.getPhoneNumbers());
             userRepository.save(existingUser);
             return DTOMapper.toDto(existingUser);
         } else {

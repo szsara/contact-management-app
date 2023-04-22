@@ -41,3 +41,13 @@
 .logo {
   margin-right: 30px;
 }
+
+h3 {
+  cursor: pointer;
+  color: #8486bf;
+  margin-left: 4rem;
+}
+
+h3:hover {
+  color:white;
+}

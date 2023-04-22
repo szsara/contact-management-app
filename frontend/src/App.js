@@ -19,7 +19,7 @@ function App() {
     <div className="content">
       <div className="header">
         <h1 className="logo">CMS</h1>
-        <h3 onClick={handleShowList}>List</h3>
+        <h3 onClick={handleShowList}>User List</h3>
         <button id="new-user-btn" onClick={handleShowForm}>
           Add new user
         </button>

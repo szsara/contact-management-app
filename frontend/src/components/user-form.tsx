@@ -57,6 +57,7 @@ function UserForm() {
       const responseData = await response.json();
 
       if (response.ok) {
+        alert("User created successfully");
         console.log('User created successfully');
         setName('');
         setEmail('');

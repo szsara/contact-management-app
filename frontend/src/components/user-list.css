@@ -1,0 +1,55 @@
+table {
+    border-collapse: collapse;
+  }
+  
+  td {
+    border-bottom: 1px solid #8486bf;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  td, th {
+    padding: 15px;
+  }
+
+  th {
+    text-align: start;
+  }
+
+  .edit-btn {
+    background-color: #3A3C5C;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  .edit-btn:hover {
+    background-color: #616289;
+}
+
+.expand-btn {
+    background-color: transparent;
+    color: #8486bf;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.table-input {
+    width: 100px;
+}
+
+.edit-btn-action {
+    background-color: #3A3C5C;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    width: 70px;
+    margin: 5px;
+}
+
+.edit-btn-action:hover {
+    background-color: #616289;
+}
