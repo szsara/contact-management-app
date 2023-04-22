@@ -232,6 +232,9 @@ function UserList() {
                     <th></th>
                     <th></th>
                 </tr>
+                <tr>
+                    <th colSpan={12}><hr /></th>
+                </tr>
             </thead>
             <tbody>
                 {users.map((user, index) => (

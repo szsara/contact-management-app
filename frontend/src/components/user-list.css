@@ -67,3 +67,7 @@ table {
 .delete-btn:hover {
     background-color: #2F2F2F;
 }
+
+hr {
+    width: 100%;
+}
