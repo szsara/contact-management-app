@@ -3,7 +3,7 @@ table {
   }
   
   td {
-    border-bottom: 1px solid #8486bf;
+    border-bottom: 1px solid #2F2F2F;
     padding-top: 10px;
     padding-bottom: 10px;
   }
@@ -17,7 +17,7 @@ table {
   }
 
   .edit-btn {
-    background-color: #3A3C5C;
+    background-color: #1857B7;
     border-radius: 5px;
     color: white;
     padding: 10px;
@@ -26,12 +26,12 @@ table {
   }
 
   .edit-btn:hover {
-    background-color: #616289;
+    background-color: #2F2F2F;
 }
 
 .expand-btn {
     background-color: transparent;
-    color: #8486bf;
+    color: #1857B7;
     font-size: 24px;
     cursor: pointer;
 }
@@ -41,7 +41,7 @@ table {
 }
 
 .edit-btn-action {
-    background-color: #3A3C5C;
+    background-color: #1857B7;
     border-radius: 5px;
     color: white;
     padding: 10px;
@@ -51,5 +51,19 @@ table {
 }
 
 .edit-btn-action:hover {
-    background-color: #616289;
+    background-color: #2F2F2F;
+}
+
+.delete-btn {
+    background-color: #263244;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    width: 70px;
+    margin: 5px;
+}
+
+.delete-btn:hover {
+    background-color: #2F2F2F;
 }

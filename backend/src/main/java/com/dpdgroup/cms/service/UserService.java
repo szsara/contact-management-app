@@ -30,7 +30,10 @@ public class UserService {
     }
 
     public List<UserDto> list() {
-        return userRepository.findAll().stream().map(DTOMapper::toDto).toList();
+        return userRepository.findAll()
+                .stream()
+                .map(DTOMapper::toDto)
+                .toList();
     }
 
     public UserDto update(Long id, UserDto user) {
@@ -57,10 +60,7 @@ public class UserService {
         Optional<User> userOptional = userRepository.findById(id);
         if (userOptional.isPresent()) {
             User existingUser = userOptional.get();
-            existingUser.setName(null);
             existingUser.setBirthdate(null);
-            existingUser.setPlaceOfBirth(null);
-            existingUser.setMothersName(null);
             existingUser.setSsn(null);
             existingUser.setTaxId(null);
             existingUser.setEmail(null);

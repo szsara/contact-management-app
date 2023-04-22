@@ -195,6 +195,27 @@ function UserList() {
         }
     }
 
+    async function handleDeleteUser(id: number): Promise<void> {
+        try {
+            const response = await fetch(`http://localhost:8080/user/depersonalize/${id}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+            });
+            const responseData = await response.json();
+
+            if (!response.ok) {
+                alert(JSON.stringify(responseData));
+                throw new Error('Failed to delete user');
+            }
+            alert("User deleted successfully");
+            setEditingIndex(-1);
+        } catch (error) {
+            console.error('An error occurred:', error);
+        }
+    }
+
     return (
         <table>
             <thead>
@@ -208,6 +229,7 @@ function UserList() {
                     <th>Email</th>
                     <th>Addresses</th>
                     <th>Phone Numbers</th>
+                    <th></th>
                     <th></th>
                 </tr>
             </thead>
@@ -226,7 +248,7 @@ function UserList() {
                                 {editingIndex === index ? (
                                     <input className="table-input" type="date" value={editedUser.birthdate} onChange={(e) => handleUserChange('birthdate', e.target.value)} />
                                 ) : (
-                                    user.birthdate
+                                    user.birthdate ? new Date(user.birthdate).toISOString().split('T')[0] : ""
                                 )}
                             </td>
                             <td>
@@ -281,6 +303,9 @@ function UserList() {
                                 ) : (
                                     <button className="edit-btn" type="button" onClick={() => handleEditUser(Number(index))}>Edit</button>
                                 )}
+                            </td>
+                            <td>
+                                <button className="delete-btn" type="button" onClick={() => handleDeleteUser(Number(user.id))}>Delete</button>
                             </td>
                         </tr>
                         {expandedRowIndex === index && (

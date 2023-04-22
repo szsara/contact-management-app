@@ -64,6 +64,7 @@ function UserForm() {
         setAddresses([{ postalCode: '', city: '', street: '', houseNumber: '', building: '', floor: '' }]);
         setPhoneNumbers(['']);
       } else {
+        alert(JSON.stringify(responseData));
         console.error('Failed to create user');
         console.error(responseData);
       }

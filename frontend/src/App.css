@@ -15,14 +15,14 @@
   align-items: center;
   padding: 20px;
   justify-content: space-between;
-  background-color: #191921;
+  background-color: #1C1C1C;
   margin-bottom: 50px;
   height: 60px;
 }
 
 #new-user-btn {
   height: 50px;
-  background-color: #8486bf;
+  background-color: #3385FF;
   border-radius: 5px;
   color: white;
   padding: 10px;
@@ -34,8 +34,7 @@
 }
 
 #new-user-btn:hover {
-  background-color: #616289;
-  color: white;
+  background-color: #2F2F2F;
 }
 
 .logo {
@@ -44,7 +43,7 @@
 
 h3 {
   cursor: pointer;
-  color: #8486bf;
+  color: #3385FF;
   margin-left: 4rem;
 }
 
