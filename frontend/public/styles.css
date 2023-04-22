@@ -1,0 +1,7 @@
+html, body {
+    background-color: #141416;
+    color: white;
+    margin: 0;
+}
+
+input, button, submit { border:none; } 
