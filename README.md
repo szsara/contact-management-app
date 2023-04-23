@@ -1,5 +1,5 @@
-# cms-dpdgroup-interview
-Contact Management Application for DPDgroup coding interview
+# contact-management-application
+Contact Management Application
 
 To start the application:
 - Clone project: https://github.com/szsara/cms-dpdgroup-interview.git
