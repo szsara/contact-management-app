@@ -119,13 +119,13 @@ function UserForm() {
               SSN Number
             </label>
             <br />
-            <input type="text" value={ssn} onChange={(e) => setSsnNumber(e.target.value)} />
+            <input placeholder="XXX-XXX-XXX" type="text" value={ssn} onChange={(e) => setSsnNumber(e.target.value)} />
             <br />
             <label>
               Tax ID
             </label>
             <br />
-            <input type="text" value={taxId} onChange={(e) => setTaxId(e.target.value)} />
+            <input placeholder="XXXXXXXXX" type="text" value={taxId} onChange={(e) => setTaxId(e.target.value)} />
             <br />
             <label>
               Email
@@ -140,7 +140,7 @@ function UserForm() {
                   Postal Code
                 </label>
                 <br />
-                <input type="text" name="postalCode" value={address.postalCode} onChange={(e) => handleAddressChange(index, e)} />
+                <input placeholder="XXXX" type="text" name="postalCode" value={address.postalCode} onChange={(e) => handleAddressChange(index, e)} />
                 <br />
                 <label>
                   City
@@ -184,7 +184,7 @@ function UserForm() {
                   Phone Number
                 </label>
                 <br />
-                <input type="text" value={phoneNumber} onChange={(e) => handlePhoneNumberChange(index, e)} />
+                <input placeholder="XX-XXX-XXXX" type="text" value={phoneNumber} onChange={(e) => handlePhoneNumberChange(index, e)} />
               </div>
             ))}
             <button className="add-btn" type="button" onClick={handleAddPhoneNumber}>
