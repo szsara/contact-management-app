@@ -19,9 +19,9 @@ services:
     ports:
       - 8080:8080
     depends_on:
-      - postgres
+      - postgres_db
     links:
-      - postgres:postgres
+      - postgres_db:postgres
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://${POSTGRES_HOST:-postgres_db}:${POSTGRES_PORT:-5432}/${POSTGRES_DB:-cms}
       SPRING_DATASOURCE_USERNAME: ${POSTGRES_USER:-postgres}
