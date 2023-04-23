@@ -17,7 +17,7 @@ Swagger UI available for API endpoint tests running on localhost at: http://loca
 
     - Form to submit new user information
     
-    - Table view to list and edit user information 
+    - Table view to list and edit and delete user information 
 
 :white_check_mark: Java Spring Boot backend
 
