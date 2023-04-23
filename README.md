@@ -2,7 +2,7 @@
 Contact Management Application
 
 To start the application:
-- Clone project: https://github.com/szsara/cms-dpdgroup-interview.git
+- Clone project: https://github.com/szsara/contact-management-app.git
 - Start the Docker engine
 - From the root directory run: 'docker compose build' then 'docker compose up'
   the backend service should start on port 8080, the frontend on port 3000, and postgres on port 5432
