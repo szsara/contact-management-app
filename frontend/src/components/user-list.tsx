@@ -24,13 +24,8 @@ interface User {
     phoneNumbers: string[];
 }
 
-interface Props {
-    users: User[];
-}
-
 function UserList() {
     const [editingIndex, setEditingIndex] = useState(-1);
-    const [editingAddressIndex, setEditingAddressIndex] = useState(-1);
     const [editedUser, setEditedUser] = useState<User>({
         id: -1,
         name: '',
@@ -42,15 +37,6 @@ function UserList() {
         email: '',
         addresses: [],
         phoneNumbers: [],
-    });
-    const [editedAddress, setEditedAddress] = useState<Address>({
-        id: -1,
-        street: '',
-        city: '',
-        postalCode: '',
-        houseNumber: -1,
-        building: '',
-        floor: -1
     });
     const [users, setUsers] = useState<User[]>([]);
 
@@ -68,21 +54,6 @@ function UserList() {
     const handleEditUser = (index: number, addressIndex?: number) => {
         setEditingIndex(index);
         setEditedUser(users[index]);
-        if (addressIndex !== undefined) {
-            setEditingAddressIndex(addressIndex);
-            setEditedAddress(users[index].addresses[addressIndex]);
-        } else {
-            setEditingAddressIndex(-1);
-            setEditedAddress({
-                id: -1,
-                street: '',
-                city: '',
-                postalCode: '',
-                houseNumber: -1,
-                building: '',
-                floor: -1
-            });
-        }
     };
 
     const handleCancelEdit = () => {
@@ -98,16 +69,6 @@ function UserList() {
             email: '',
             addresses: [],
             phoneNumbers: [],
-        });
-        setEditingAddressIndex(-1);
-        setEditedAddress({
-            id: -1,
-            street: '',
-            city: '',
-            postalCode: '',
-            houseNumber: -1,
-            building: '',
-            floor: -1
         });
     };
 
@@ -143,31 +104,6 @@ function UserList() {
         setEditedUser((prev) => ({
             ...prev,
             [fieldName]: fieldValue,
-        }));
-    };
-
-    const handleAddressChange = (
-        index: number,
-        fieldName: keyof Address,
-        fieldValue: string
-    ) => {
-        const newAddresses = [...editedUser.addresses];
-        newAddresses[index] = {
-            ...newAddresses[index],
-            [fieldName]: fieldValue,
-        };
-        setEditedUser((prev) => ({
-            ...prev,
-            addresses: newAddresses,
-        }));
-    };
-
-    const handlePhoneNumberChange = (index: number, fieldValue: string) => {
-        const newPhoneNumbers = [...editedUser.phoneNumbers];
-        newPhoneNumbers[index] = fieldValue;
-        setEditedUser((prev) => ({
-            ...prev,
-            phoneNumbers: newPhoneNumbers,
         }));
     };
 
