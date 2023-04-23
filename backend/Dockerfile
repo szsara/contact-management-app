@@ -1,9 +1,10 @@
-FROM maven:3.8.1-jdk-17 as build
+FROM maven:3.8.5-openjdk-17 AS build
+
 WORKDIR /app
 COPY pom.xml .
-RUN mvn clean package -DskipTests
-COPY src/ /app/src/
-RUN mvn package
+
+COPY src/ src/
+RUN mvn package -DskipTests
 
 FROM openjdk:17
 WORKDIR /app
